@@ -18,3 +18,12 @@ class CovidResult(models.Model):
     ]
     result = models.CharField(choices=status)
 
+
+class Zones(models.Model):
+    pinCode = models.CharField(max_length=6)
+    numCases = models.IntegerField()
+    type_choices = [
+        ('orange', 'ORANGE'),
+        ('red', 'RED')
+    ]
+    zoneType = models.CharField(choices=type_choices)
