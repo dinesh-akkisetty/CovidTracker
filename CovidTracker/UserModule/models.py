@@ -15,7 +15,7 @@ class SelfAssessment(models.Model):
         ('cold', 'cold'),
         ('cough', 'cough')
     ]
-    symptoms = models.CharField(choices=symptoms_choices)
+    symptoms = models.CharField(choices=symptoms_choices, max_length=5)
     travelHistory = models.BooleanField()
     contactWithCovidPatient = models.BooleanField()
 
